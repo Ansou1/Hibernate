@@ -1,5 +1,6 @@
 package com.ansou.hibernate;
 
+import com.ansou.hibernate.entity.Course;
 import com.ansou.hibernate.entity.Instructor;
 import com.ansou.hibernate.entity.InstructorDetail;
 import org.hibernate.Session;
@@ -11,18 +12,15 @@ public class CreateDemo {
         SessionFactory sessionFactory = new Configuration().configure("hibernate.cfg.xml")
                 .addAnnotatedClass(Instructor.class)
                 .addAnnotatedClass(InstructorDetail.class)
+                .addAnnotatedClass(Course.class)
                 .buildSessionFactory();
 
         Session session = sessionFactory.getCurrentSession();
 
 
         try {
-            Instructor tempInstructor = new Instructor("Simon", "Daguenet", "simondaguenet81@gmail.com");
-            InstructorDetail tempInstructorDetail = new InstructorDetail("youtube/JavaTutorial.com", "Fishing");
-
-            //com.ansou.hibernate.entity.Instructor tempInstructor = new com.ansou.hibernate.entity.Instructor("Eunju", "Shin", "cheesee@gmail.com");
-            //com.ansou.hibernate.entity.InstructorDetail tempInstructorDetail = new com.ansou.hibernate.entity.InstructorDetail("youtube/cheese.com", "Eating");
-
+            Instructor tempInstructor = new Instructor("Sohyeon", "Shin", "sohyeon@gmail.com");
+            InstructorDetail tempInstructorDetail = new InstructorDetail("youtube/video.com", "Gaming");
 
             tempInstructor.setInstructorDetail(tempInstructorDetail);
 
@@ -33,6 +31,7 @@ public class CreateDemo {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
+            session.close();
             sessionFactory.close();
         }
     }
