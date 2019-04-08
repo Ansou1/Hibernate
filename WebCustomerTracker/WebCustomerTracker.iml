@@ -11,6 +11,9 @@
         </webroots>
       </configuration>
     </facet>
+    <facet type="Spring" name="Spring">
+      <configuration />
+    </facet>
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
@@ -19,10 +22,26 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="Tomcat 9.0.16" level="application_server_libraries" />
     <orderEntry type="library" name="mysql-connector-java-8.0.15" level="project" />
     <orderEntry type="library" name="hibernate-core-5.4.2.Final" level="project" />
     <orderEntry type="library" name="javax.servlet.jsp.jstl-api-1.2.1" level="project" />
     <orderEntry type="library" name="javax.servlet-api-3.0.1" level="project" />
+    <orderEntry type="library" name="spring-websocket-5.1.5.RELEASE-javadoc" level="project" />
+    <orderEntry type="library" name="c3p0-0.9.5.3" level="project" />
+    <orderEntry type="library" name="jaxb-impl-2.3.0" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://$USER_HOME$/Desktop/apache-tomcat-9.0.16" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$USER_HOME$/Desktop/apache-tomcat-9.0.16/webapps/docs/appdev/sample/src" />
+          <root url="file://$USER_HOME$/Desktop/apache-tomcat-9.0.16/webapps/examples/WEB-INF/classes" />
+          <root url="file://$USER_HOME$/Desktop/apache-tomcat-9.0.16/webapps/examples/WEB-INF/jsp/applet" />
+          <root url="file://$USER_HOME$/Desktop/apache-tomcat-9.0.16/webapps/examples/jsp/plugin/applet" />
+        </SOURCES>
+      </library>
+    </orderEntry>
   </component>
 </module>
