@@ -4,7 +4,7 @@
 <html>
 <head>
     <title>List of customers</title>
-    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css" />
+    <link href="<c:url value='/resources/css/style.css' />" rel="stylesheet">
 </head>
 <body>
     <div id="wrapper">
@@ -15,6 +15,9 @@
 
     <div id="container">
         <div id="content">
+
+            <input type="button" value="Add a Customer" onclick="window.location.href='showFromForAdd'; return false" class="add-button"/>
+
             <table>
                 <tr>
                     <th>First Name</th>
